@@ -1,6 +1,6 @@
 # Cpp Orthodox Generator Script
 
-### Created by : [marbenMB](https://github.com/marbenMB)
+### Created by : [marbenMB](https://github.com/marbenMB) Forked by [EliotGrd](https://github.com/EliotGrd)
 
 ---
 
