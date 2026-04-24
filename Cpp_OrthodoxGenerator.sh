@@ -39,31 +39,23 @@ then
 
 		#	***		Printing To Class.hpp	***
 
-		echo "#ifndef _"$CLASS"_HPP_" >> $CLASS.hpp
-		echo "#define _"$CLASS"_HPP_" >> $CLASS.hpp
+		echo "#ifndef "$CLASS"_HPP" >> $CLASS.hpp
+		echo "#define "$CLASS"_HPP" >> $CLASS.hpp
 		printf "\n" >> $CLASS.hpp
 		echo "#include <iostream>" >> $CLASS.hpp
 		printf "\n" >> $CLASS.hpp
 
-		echo "// ******************************************************** //" >> $CLASS.hpp
-		echo "//                         CLASSES                         //" >> $CLASS.hpp
-		echo "// ****************************************************** //" >> $CLASS.hpp
-
 		printf "\nclass	$CLASS
 {
+	private	:
+		//	DataType	attributes.
+	
 	public	:
 		$CLASS ();
 		$CLASS ($CLASS const &obj);
 		~$CLASS ();
 		$CLASS &operator= (const $CLASS &obj);
-
-	private	:
-		//	DataType	attributes.
 };\n\n" >> $CLASS.hpp
-
-		printf "// ******************************************************** //
-//                        FUNCTIONS                        //
-// ****************************************************** //\n\n" >> $CLASS.hpp
 
 		echo "#endif" >> $CLASS.hpp
 
