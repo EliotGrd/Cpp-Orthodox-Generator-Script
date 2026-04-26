@@ -9,6 +9,7 @@ printf "░█████╗░██████╗░██████╗░
 ░╚════╝░╚═╝░░░░░╚═╝░░░░░  ░╚═════╝░╚══════╝╚═╝░░╚══╝\033[m\n"
 
 printf "\n                            By : \x1b[33mmarbenMB\033[m [mbenbajj]\n"
+printf "\n                   Modified By : \x1b[33meliotgrd\033[m \n"
 echo ""
 
 echo -n "Current Directory : "
@@ -85,38 +86,16 @@ $CLASS	&$CLASS::operator= (const $CLASS &obj)
 	std::cout << \"Copy Assignment Operator Called\" << std::endl;
 	if (this != &obj)
 	{
-		//	this->attributes = obj.attributes;
-		//	...
+		//this->attributes = obj.attributes;
 	}
 	return (*this);
 }\n" > $CLASS.cpp
 
-	echo -ne "\x1b[33mCreate main.cpp and Makefile \033[m[\x1b[32my\033[m/\x1b[31mn\033[m] : "
+	echo -ne "\x1b[33mCreate main.cpp \033[m[\x1b[32my\033[m/\x1b[31mn\033[m] : "
 	read OPTION
 	if [ $OPTION == "y" ] || [ $OPTION == "yes" ] &> /dev/null
 	then
-		/usr/bin/touch main.cpp Makefile
-		#	***		Printing To Makefile	***
-
-			printf "NAME = $CLASS \n
-CXXFLAGS = -Wall -Wextra -Werror -fsanitize=address\n
-CC = c++ \n
-STD = -std=c++98 \n
-SRC = $CLASS.cpp main.cpp \n
-INC = $CLASS.hpp \n
-OBJ = \$(SRC:.cpp=.o) \n
-all : \$(NAME) \n
-\$(NAME) : \$(OBJ)
-	\$(CC) \$(CXXFLAGS) \$(STD) \$(OBJ) -o \$(NAME) \n\n" >> Makefile
-
-		echo %.o : %.cpp "\$(INC)" >> Makefile
-		printf "	\$(CC) \$(CXXFLAGS) -c \$< -o \$@ \n
-clean :
-	rm -rf \$(OBJ) \n
-fclean : clean
-	rm -rf \$(NAME) \n
-re : fclean all \n
-.PHONY : all clean fclean re\n" >> Makefile
+		/usr/bin/touch main.cpp
 
 			#	***		Printing To main.cpp	***
 
@@ -124,7 +103,7 @@ re : fclean all \n
 int main()
 {
 	//	You Code\n
-	std::cout << \"******	MAR_BEN CREATION √	******\" << std::endl;\n
+	std::cout << \"\" << std::endl;\n
 	return (0);
 }\n" > main.cpp
 	fi
