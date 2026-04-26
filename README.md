@@ -15,7 +15,7 @@
 - Execute this line of command in your terminal :
 
 ```jsx
-cd && git clone https://github.com/marbenMB/Cpp-Orthodox-Generator-Script.git
+cd && git clone https://github.com/EliotGrd/Cpp-Orthodox-Generator-Script.git
 ```
 
 - The Script will be cloned to the Home directory :
